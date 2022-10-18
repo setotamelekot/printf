@@ -7,7 +7,23 @@
 #include <limits.h>
 #include <unistd.h>
 
+#include <unistd.h>
 
+#define UNUSED(x) (void)(x)
+#define BUFF_SIZE 1024
+
+/**
+ * _putchar - writes the character c to stdou
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately
+ */
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
 
 /**
  * struct format - match the conversion specifiers for printf
@@ -43,7 +59,7 @@ int _strlenc(const char *s);
 int printf_37(void);
 int printf_char(va_list val);
 int printf_string(va_list val);
-int _putchar(char c);
+
 int _printf(const char *format, ...);
 
 #endif
